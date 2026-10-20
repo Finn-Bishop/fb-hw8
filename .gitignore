@@ -1,0 +1,16 @@
+# Dependencies (recreate with `npm install`)
+node_modules/
+
+# Logs
+npm-debug.log*
+*.log
+
+# Claude Code change log (local notes only)
+CC_changes.txt
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
