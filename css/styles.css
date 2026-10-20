@@ -63,7 +63,8 @@ a:hover {
 {
     max-width: 960px;
     margin: 0 auto;
-    padding: 50px;
+    padding: 0 50px;
+    display: flow-root; /* contain floated columns so the next section starts below them */
 }
 
 .column-narrow {
@@ -88,6 +89,17 @@ header {
 
 header p {
     color: #8D99AE;
+}
+
+.profile-img {
+    border-radius: 50%;
+    aspect-ratio: 1 / 1; /* square box so the 50% radius makes a circle, not an oval */
+    object-fit: cover;   /* crop the photo to fill the square instead of stretching */
+    padding-right: 0;    /* padding would flatten the circle's right side */
+}
+
+header .column-wide {
+    padding-left: 3%;    /* replaces the gap the image's padding-right used to provide */
 }
 
 footer {

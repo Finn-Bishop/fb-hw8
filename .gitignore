@@ -1,6 +1,6 @@
 # Dependencies (recreate with `npm install`)
 node_modules/
-
+scratchpad.md
 # Logs
 npm-debug.log*
 *.log
