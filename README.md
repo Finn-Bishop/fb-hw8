@@ -1,9 +1,9 @@
-# Homework 7 - Finn Bishop - COMP 484
+# Homework 8 - Finn Bishop - COMP 484
 
-A simple project with a few basic pages about my favorite animes!
+Personal resume completed. 
 
 ## 🚀 Live Demo
 
 You can view the published website here:
-Live website on github pages: (https://finn-bishop.github.io/fb-hw7/)
+Live website on github pages: (https://finn-bishop.github.io/fb-hw8/)
 
