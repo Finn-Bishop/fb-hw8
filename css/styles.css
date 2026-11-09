@@ -28,6 +28,9 @@ body {
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
+    background-image: url('https://wallpapercave.com/wp/wp14739059.jpg');
+    z-index: 1000;
+    /*padding-top: 46px; /* height of the fixed nav (25.6px line + 20px padding) so it doesn't cover the header */
 }
 
 h1,
@@ -93,7 +96,7 @@ header {
 }
 
 header p {
-    color: #8D99AE;
+    color: #34363a;
 }
 
 .profile-img {
@@ -134,5 +137,50 @@ footer {
 /* Education
 ------------------------------------*/
 .education {
-    background: #E6E1D6; /* cream grey */
+    background: #E6E1D6;
+    z-index: 1001; 
+}
+
+/* Projects 
+-------------------------------------*/
+.projects {
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 30%, rgba(0,0,0,0.8) 100%), url('https://wallpapercave.com/wp/wp14739059.jpg');
+    background-position: center center;
+    background-attachment: fixed; /* I originally thought this would need to be z-index fiddling but this alone worked. */
+    object-fit: fill;
+    /* Credit to FRIEREN FOR IMAGE!!!! Also, the gradient may not be visible but it is there.*/
+}
+
+/* Navigation
+------------------------------------*/
+/* The nav element uses class="non-list-nav", so target that (".nav" matched nothing) */
+.non-list-nav {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #8D99AE;
+    text-align: center;
+    z-index: 1000;
+    transition: all 0.3s ease; /* smooth transition for hover effect */
+}
+
+/* Smooth-scroll to nav targets, and stop the fixed nav from covering each section's heading */
+html {
+    scroll-behavior: smooth;
+}
+
+section,
+footer {
+    scroll-margin-top: 50px;
+}
+
+.non-list-nav.fixed-top {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    color: #8D99AE;
+    text-align: center;
+    z-index: 1000;
 }

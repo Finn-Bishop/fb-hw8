@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://kit.fontawesome.com/c5dd7163e1.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <!-- // Intro -->
@@ -23,14 +24,57 @@
                 <p><i>I'm a full stack developer specializing in game development and artificial intelligence. </i></p>
             </div>
         </div>
+        <nav class="non-list-nav">
+            <p><a href="#work-experience">Work Experience</a></p>
+            <p><a href="#projects">Projects</a></p>
+            <p><a href="#education">Education</a></p>
+            <p><a href="#contact">Contact</a></p>
+            <p><a href="files/Finn%20Bishop%20_%20Resume.pdf" download>Download PDF</a></p>
+        </nav>
+        <script>
+            window.addEventListener("scroll", function() {
+                const nav = document.querySelector(".non-list-nav");
+                const previousElement = nav.previousElementSibling;
+                const previousElementHeight = previousElement.offsetHeight;
+                if (window.scrollY > previousElementHeight) {
+                    nav.classList.add("fixed-top");
+                } else {
+                    nav.classList.remove("fixed-top");
+                }
+            })
+        </script>
+        <style>
+            .non-list-nav {
+                display: flex;
+                justify-content: space-around;
+                background-color: #f0f0f0;
+                padding: 10px 0;
+            }
+
+            .non-list-nav p {
+                margin: 0;
+                font-weight: bold;
+                cursor: pointer;
+                font-family: 'roboto', sans-serif;
+            }
+
+            .non-list-nav p:hover {
+                color: #007BFF;
+            }
+
+            /* Links take the <p>'s color (incl. the hover blue) instead of the global light-grey link color */
+            .non-list-nav a {
+                color: inherit;
+                text-decoration: none;
+            }
+        </style>
     </header>
 
     <main>
         <!-- // Work Experience -->
-        <section class="work-experience">
+        <section id="work-experience" class="work-experience">
             <div class="content-wrapper">
                 <h2>Work Experience</h2>
-
                 <!-- Job Details: copy this whole block to add more jobs -->
                 <div class="column-narrow">
                     <h3>ASP.NET Developer</h3>
@@ -51,12 +95,34 @@
                         <li>Implemented authentication and role-based authorization with ASP.NET Core Identity.</li>
                     </ul>
                 </div>
+
+                <!-- End of job details. -->
             </div>
         </section>
 
+        <section id="projects" class="projects">
+            <div class="content-wrapper">
+                <h2>Projects</h2>
+                <div class="column-narrow">
+                    <h3>Portfolio Website</h3>
+                    <p>Personal Project</p>
+                    <p>Jan 2024 - Feb 2024</p>
+                </div>
+
+                <div class="column-wide">
+                    <p>Developed a responsive portfolio website using HTML, CSS, and JavaScript to showcase my projects and skills.</p>
+                    <ul>
+                        <li>Implemented a dynamic project gallery with filtering options.</li>
+                        <li>Integrated contact form with email notifications using PHP.</li>
+                        <li>Optimized website performance and SEO best practices.</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
 
         <!-- // Education -->
-        <section class="education">
+        <section id="education" class="education">
             <div class="content-wrapper">
                 <h2>Education</h2>
 
@@ -80,17 +146,23 @@
     </main>
 
     <!-- // Footer & contact info -->
-    <footer>
+    <footer id="contact">
         <div class="content-wrapper">
             <h2>Let's Keep in Touch!</h2>
+            <i>Links below are for display only**</i>
 
             <!-- Social media and contact links. Add or remove any networks. -->
             <div class="contact-info">
-                <a href="mailto:email@example.com">email@example.com</a>
-                <a href="http://yourwebsite.com" target="_blank">yourwebsite.com</a>
-                <a href="#" target="_blank">Twitter</a>
-                <a href="#" target="_blank">LinkedIn</a>
-                <a href="#" target="_blank">Facebook</a>
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:email@example.com">finn.bishop.344@my.csun.edu</a>
+                
+                <a href="http://yourwebsite.com" target="_blank"><i class="fa-solid fa-school"></i>www.csun.edu</a>
+                
+                <a href="#" target="_blank"><i class="fa-brands fa-twitter"></i>Twitter</a>
+
+                <a href="#" target="_blank"><i class="fa-brands fa-square-linkedin"></i>LinkedIn</a>
+                
+                <a href="#" target="_blank"><i class="fa-brands fa-square-facebook"></i>Facebook</a>
             </div>
         </div>
     </footer>
